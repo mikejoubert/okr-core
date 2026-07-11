@@ -1,5 +1,5 @@
 {
-  "name": "@okr-core/cli",
+  "name": "okr-core",
   "version": "0.1.0",
   "description": "Cross-runtime installer for the OKR Core Business OKR project-manager plugin for Claude Code.",
   "type": "module",

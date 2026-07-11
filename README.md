@@ -53,11 +53,19 @@ writes them back, and tells you the next command.
 
 Cross-runtime installer (Node ≥18, Bun, or Deno). No dependencies.
 
+Clone the repo, then run the bootstrap installer for your OS. It resolves whichever
+JS runtime you have (`node` → `bun` → `deno`) and copies the plugin payload
+(`agents/`, `commands/`, `skills/`, `src/`, `.claude-plugin/`) into your Claude
+Code plugins directory. Re-running is idempotent.
+
+```bash
+git clone https://github.com/mikejoubert/okr-core.git
+cd okr-core
+```
+
 **Global — available in every project:**
 
 ```bash
-npx @okr-core/cli --global
-# or, from a checkout:
 ./install.sh --global        # macOS / Linux / WSL / Git Bash
 ./install.ps1 --global       # Windows PowerShell
 ```
@@ -65,7 +73,7 @@ npx @okr-core/cli --global
 **Local — this project only:**
 
 ```bash
-npx @okr-core/cli --local
+./install.sh --local
 ```
 
 **Custom target:**
@@ -74,18 +82,30 @@ npx @okr-core/cli --local
 node bin/okr-install.mjs --dest /path/to/.claude/plugins
 ```
 
-The installer copies the plugin payload (`agents/`, `commands/`, `skills/`,
-`src/`, `.claude-plugin/`) into your Claude Code plugins directory. Re-running is
-idempotent.
+You can also pipe the bootstrap straight from GitHub without cloning first:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/mikejoubert/okr-core/main/install.sh | sh -s -- --global
+```
 
 ### Via the plugin marketplace
 
 This repo ships a `.claude-plugin/marketplace.json`, so it can also be added as a
-Claude Code plugin marketplace directly from GitHub:
+Claude Code plugin marketplace directly from GitHub — no clone required:
 
 ```
 /plugin marketplace add mikejoubert/okr-core
 /plugin install okr-core@okr-core-marketplace
+```
+
+### Via npm (once published)
+
+The package is set up to publish as `okr-core`. Once it's on npm, the installer is
+available with no clone:
+
+```bash
+npx okr-core --global
+npx okr-core --local
 ```
 
 ---

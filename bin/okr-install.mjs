@@ -10,9 +10,9 @@
  * which is honoured by Node (>=18), Bun, and Deno (`deno run -A`). No transpile
  * step, no third-party packages.
  *
- *   Global (all projects):   npx @okr-core/cli --global
- *   Local (this repo only):  npx @okr-core/cli --local
- *   Custom target:           npx @okr-core/cli --dest /path/to/.claude/plugins
+ *   Global (all projects):   node bin/okr-install.mjs --global   (or: npx okr-core --global, once published)
+ *   Local (this repo only):  node bin/okr-install.mjs --local
+ *   Custom target:           node bin/okr-install.mjs --dest /path/to/.claude/plugins
  *
  * Idempotent: re-running overwrites the installed copy in place.
  */
