@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Installer artifact dropped into install targets
+.okr-install.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Local Claude Code state
+.claude/plugins/okr-core/
+
+# NOTE: a consuming team's live OKR data lives in their project's okr/ dir,
+# not in this plugin repo. Do not ignore okr/ in downstream projects — that's
+# the record you want under version control.

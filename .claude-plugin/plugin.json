@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
+  "name": "okr-core",
+  "displayName": "OKR Core — Business OKR Project Manager",
+  "version": "0.1.0",
+  "description": "A facilitator-and-documenter Project Manager for Claude Code that runs a human team through an adapted 5-phase OKR loop (Discuss → Plan → Execute → Verify → Ship). Enforces OKR best practices, tracks Objectives, Key Results, and Initiatives in durable STATE.md / CONTEXT.md artifacts.",
+  "author": {
+    "name": "Michael Joubert",
+    "email": "mike@michaeljoubert.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/your-org/okr-core",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/okr-core.git"
+  },
+  "keywords": [
+    "okr",
+    "objectives-and-key-results",
+    "project-management",
+    "facilitation",
+    "business",
+    "raci",
+    "claude-code"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "skills": "./skills"
+}

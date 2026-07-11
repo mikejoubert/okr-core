@@ -1,0 +1,38 @@
+{
+  "name": "@okr-core/cli",
+  "version": "0.1.0",
+  "description": "Cross-runtime installer for the OKR Core Business OKR project-manager plugin for Claude Code.",
+  "type": "module",
+  "bin": {
+    "okr-core": "./bin/okr-install.mjs"
+  },
+  "files": [
+    "bin/",
+    "agents/",
+    "commands/",
+    "skills/",
+    "src/",
+    ".claude-plugin/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "install:global": "node ./bin/okr-install.mjs --global",
+    "install:local": "node ./bin/okr-install.mjs --local"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "okr",
+    "claude-code",
+    "project-management",
+    "plugin"
+  ],
+  "author": "Michael Joubert <mike@michaeljoubert.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-org/okr-core.git"
+  }
+}
