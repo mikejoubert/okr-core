@@ -6,7 +6,7 @@
 
     ./install.ps1 --global
     ./install.ps1 --local
-    irm https://raw.githubusercontent.com/your-org/okr-core/main/install.ps1 | iex   # then re-run with a flag
+    irm https://raw.githubusercontent.com/mikejoubert/okr-core/main/install.ps1 | iex   # then re-run with a flag
 #>
 param([Parameter(ValueFromRemainingArguments = $true)] [string[]] $Args)
 

@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-plugin.json",
   "name": "okr-core",
   "displayName": "OKR Core — Business OKR Project Manager",
   "version": "0.1.0",
@@ -9,10 +8,10 @@
     "email": "mike@michaeljoubert.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/your-org/okr-core",
+  "homepage": "https://github.com/mikejoubert/okr-core",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/okr-core.git"
+    "url": "https://github.com/mikejoubert/okr-core.git"
   },
   "keywords": [
     "okr",

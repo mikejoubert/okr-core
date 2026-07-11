@@ -1,5 +1,4 @@
 {
-  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "okr-core-marketplace",
   "displayName": "OKR Core Marketplace",
   "description": "Distribution marketplace for the OKR Core Business OKR project-manager plugin.",

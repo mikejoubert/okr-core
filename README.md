@@ -84,7 +84,7 @@ This repo ships a `.claude-plugin/marketplace.json`, so it can also be added as 
 Claude Code plugin marketplace directly from GitHub:
 
 ```
-/plugin marketplace add your-org/okr-core
+/plugin marketplace add mikejoubert/okr-core
 /plugin install okr-core@okr-core-marketplace
 ```
 

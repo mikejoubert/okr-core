@@ -6,7 +6,7 @@
 #
 #   ./install.sh --global
 #   ./install.sh --local
-#   curl -fsSL https://raw.githubusercontent.com/your-org/okr-core/main/install.sh | sh -s -- --global
+#   curl -fsSL https://raw.githubusercontent.com/mikejoubert/okr-core/main/install.sh | sh -s -- --global
 set -eu
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
