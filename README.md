@@ -110,6 +110,73 @@ npx okr-core --local
 
 ---
 
+## Set up on another computer
+
+npm publishing is **not** required — everything below works from GitHub alone.
+Pick one of the two paths. Both have been validated end-to-end (manifests,
+payload integrity, and idempotent re-install).
+
+**Prerequisites**
+- Path A: just [Claude Code](https://claude.com/claude-code) — no runtime needed.
+- Path B: [Claude Code](https://claude.com/claude-code) **and** a JS runtime on
+  `PATH` — Node ≥18 (recommended), Bun, or Deno. Plus `git`.
+
+### Path A — Plugin marketplace (simplest, zero dependencies)
+
+Inside Claude Code, run:
+
+```
+/plugin marketplace add mikejoubert/okr-core
+/plugin install okr-core@okr-core-marketplace
+```
+
+Then start the loop:
+
+```
+/okr-discuss
+```
+
+### Path B — Clone + bootstrap installer
+
+**macOS / Linux / WSL / Git Bash:**
+
+```bash
+git clone https://github.com/mikejoubert/okr-core.git
+cd okr-core
+./install.sh --global        # every project   (use --local for this project only)
+```
+
+**Windows (PowerShell):**
+
+```powershell
+git clone https://github.com/mikejoubert/okr-core.git
+cd okr-core
+./install.ps1 --global       # every project   (use --local for this project only)
+```
+
+**No git?** Pipe the bootstrap straight from GitHub instead:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/mikejoubert/okr-core/main/install.sh | sh -s -- --global
+```
+
+### Verify the install worked
+
+The installer prints `✔ Installed OKR Core → <path>` and drops a
+`.okr-install.json` manifest in the target. Confirm the plugin landed:
+
+```bash
+# global install location:
+ls ~/.claude/plugins/okr-core        # macOS / Linux / WSL
+ls $env:USERPROFILE\.claude\plugins\okr-core   # Windows PowerShell
+```
+
+You should see `agents/`, `commands/`, `skills/`, `src/`, and `.claude-plugin/`.
+Then open Claude Code and run `/okr-discuss` to begin the first cycle.
+Re-running any installer command later is safe — it refreshes the copy in place.
+
+---
+
 ## Repository structure
 
 ```
