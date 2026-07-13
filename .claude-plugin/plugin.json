@@ -9,10 +9,7 @@
   },
   "license": "MIT",
   "homepage": "https://github.com/mikejoubert/okr-core",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mikejoubert/okr-core.git"
-  },
+  "repository": "https://github.com/mikejoubert/okr-core.git",
   "keywords": [
     "okr",
     "objectives-and-key-results",
@@ -21,8 +18,5 @@
     "business",
     "raci",
     "claude-code"
-  ],
-  "commands": "./commands",
-  "agents": "./agents",
-  "skills": "./skills"
+  ]
 }
